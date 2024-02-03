@@ -1,0 +1,38 @@
+
+// Function to get an integer input from the user
+int get_int_from_user() {
+    int num;
+    std::cout << "Please enter an integer: ";
+    std::cin >> num;
+    return num;
+}
+
+// Function to compare two integers
+std::string compare_ints(int num1, int num2) {
+    if (num1 > num2) {
+        return std::to_string(num1) + " is greater than " + std::to_string(num2);
+    } else if (num1 < num2) {
+        return std::to_string(num1) + " is less than " + std::to_string(num2);
+    } else {
+        return "Both integers are equal";
+    }
+}
+
+// Function to sum two integers
+int sum_ints(int num1, int num2) {
+    return num1 + num2;
+}
+
+int main() {
+    // Get integers from the user
+    int num1 = get_int_from_user();
+    int num2 = get_int_from_user();
+
+    // Compare the integers
+    std::cout << compare_ints(num1, num2) << std::endl;
+
+    // Sum the integers
+    std::cout << "The sum of " << num1 << " and " << num2 << " is: " << sum_ints(num1, num2) << std::endl;
+
+    return 0;
+}
